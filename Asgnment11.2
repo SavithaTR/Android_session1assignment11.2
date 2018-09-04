@@ -1,0 +1,45 @@
+a. Is there any association between Job and default?
+Ans: subset(dataframe3, select=c(“Age”,”Dependents”))
+        select(dataframe3, Age,Dependants)
+       dataframe3[,c(“Age”,”Dependants”)]
+
+b. Is there any significant difference in duration of last call between people having housing loan or not?
+Ans: T struct{}
+       var _ I = T{}       // Verify that T implements I.
+        var _ I = (*T)(nil) // Verify that *T implements I.
+   func (t T) Equal(u T) bool { return t == u } // does not satisfy Equaler
+    func (t T2) Equal(u Equaler) bool { return t == u.(T2) }  // satisfies Equaler
+
+c. Is there any association between consumer price index and consumer?
+  Ans: dataframe6[,”Consumer Price index ”] <- split(dataframe6$Consumer Price index , ifelse(dataframe6$Consumer== “Consumer”,0,1))
+contrasts(dataframe6$Consumer) <- contr.treatment(2) 
+
+d. Is the employment variation rate consistent across job types?
+Ans: func main() {
+    done := make(chan bool)
+
+    values := []string{"a", "b", "c"}
+    for _, v := range values {
+        go func() {
+            fmt.Println(v)
+            done <- true
+        }()
+    }
+
+    // wait for all goroutines to complete before exiting
+    for _ = range values {
+        <-done
+    }
+}
+
+e. Is the employment variation rate same across education?
+Ans: dataframe8$Column3[which(dataframe8$Column3==NA)]=mean(dataframe8$Column3)
+        dataframe8$Column3[which(is.na(dataframe8$Column3))]=mean(dataframe8$Column3)
+        dataframe8$Column3[which(is.na(dataframe8$Column3))]=mean(dataframe8$Column3,na.rm=TRUE)
+        dataframe8$Column3[which(is.na(dataframe8$Column3))]=mean(dataframe8$Column3,rm.na=TRUE)
+
+f. Which group is more confident?
+Ans: dataframe9$Column8<-sapply(strsplit(as.character(dataframe9$Column7),split = “[.]”),function(x){x[1]})
+        dataframe9$Column8<-sapply(strsplit(as.character(dataframe9$Column7),split = “.”),function(x){x[1]})
+        dataframe9$Column8<-sapply(strsplit(as.character(dataframe9$Column7),split = “.”,fixed=TRUE),function(x){x[1]})
+        dataframe9$Column8<-unlist(strsplit(as.character(dataframe9$Column7),split = “.”,fixed=TRUE))[seq(1,18,2)]
